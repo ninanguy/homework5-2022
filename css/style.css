@@ -16,6 +16,7 @@ header {
 }
 
 a, a:visited {
+  /* the unvisited and visited site are blue */
   color: blue;
 }
 
@@ -24,6 +25,7 @@ a, a:visited {
   border-radius: 50px 50px 0 0;  
 }
 
+/* the pricing class is row wrapped with everything centered */
 .pricing {
   display: flex;
   flex-flow: row wrap;
@@ -31,6 +33,7 @@ a, a:visited {
   align-items: center;
 }
 
+/* given in instructions */
 .card > header {
   background-color: #288088;
   border: solid 2px #45ADAD;
@@ -38,12 +41,14 @@ a, a:visited {
   border-radius: 50px 50px 0 0;
 }
 
+/* styling the gallery images */
 .gallery > img {
   border: solid 10px #50C7C7;
   margin: 10px;
   width: 300px;
 }
 
+/* given in instructions */
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -59,37 +64,45 @@ a, a:visited {
 
   .nav_links {
     display: flex;
+    /* it is a row and it doesn't wrap */
     flex-flow: row nowrap;
   }
 
   .pricing {
     display: flex;
     flex-flow: row nowrap;
+    /* center horizontally and vertically */
     justify-content: center;
     align-items: center;
   }
   
+  /* given in instruction */
   .card {
     flex-basis: 275px;
   }
 
+  /* only targets the first header */
   body > header { 
     position: fixed;
     width: 100%;
     top: 0;
   }
 
+  /* put margin so header does not overlay the main contents */
   main {
     margin-top: 100px;
   }
 }
 
+/* print view */
 @media print{
   body {
+    /* given in instruction */
     font-family: Arial, Helvitica;
     background: #f1f1f1;
   }
   header {
+    /* its a column and space between */
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -97,6 +110,7 @@ a, a:visited {
   }
 
   nav {
+    /* make nav bar go all accross */
     width: 100%; 
   }
 
@@ -110,19 +124,22 @@ a, a:visited {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    /* put the pricing at the bottom */
     align-items:flex-end;
-    page-break-after: always;
+
   }
 
+  /* given in instruction */
   .card {
     flex-basis: 325px;
     border: solid 2px #45ADDD; 
   }
 
+  /* removes gallery */
   #gallery, .gallery{
     display: none;
   }
-
+/* add the thumbs up */
   header > h4:after {
     content: '\1F44D'
   }
