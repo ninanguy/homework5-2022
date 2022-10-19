@@ -1,0 +1,129 @@
+body {
+  font-family: 'Poppins', serif;
+  background: url(../images/concrete_seamless.png), #f1f1f1; 
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.nav_links {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+a, a:visited {
+  color: blue;
+}
+
+.card {
+  flex-basis: 450px;
+  border-radius: 50px 50px 0 0;  
+}
+
+.pricing {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > header {
+  background-color: #288088;
+  border: solid 2px #45ADAD;
+  padding: 20px 0;
+  border-radius: 50px 50px 0 0;
+}
+
+.gallery > img {
+  border: solid 10px #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .pricing {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    flex-basis: 275px;
+  }
+
+  body > header { 
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+}
+
+@media print{
+  body {
+    font-family: Arial, Helvitica;
+    background: #f1f1f1;
+  }
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    width: 100%; 
+  }
+
+  .nav_links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .pricing {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items:flex-end;
+    page-break-after: always;
+  }
+
+  .card {
+    flex-basis: 325px;
+    border: solid 2px #45ADDD; 
+  }
+
+  #gallery, .gallery{
+    display: none;
+  }
+
+  header > h4:after {
+    content: '\1F44D'
+  }
+}
